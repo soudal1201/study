@@ -8,17 +8,16 @@
     </head>
     <body>
         <script>
-            function asdf() {
-                
-            for (var i = 0; true; i++) {
-                alert(i + '번째 반복문입니다.')
-
-                if (!confirm('계속하시겠습니까?')) {
-                    break;
-                }
+            function test(name) {
+                var output = 'hello ' + name + ' ..!';
+                return function () {
+                    alert(output);
+                };
             }
-            asdf();
-        }
+
+            var test = test('javaScript');
+
+            test();
         </script>
 
     </body>

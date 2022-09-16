@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function introduce(lastName, firstName, callback) {
+                var fullName = lastName + firstName;
+
+                callback(fullName);
+            }
+
+            function say_hello(name) {
+                alert("안녕하세요 제 이름은 " + name + "입니다");
+            }
+
+            function say_bye(name) {
+                alert
+                ("지금까지 " + name + "이었습니다. 안녕히계세요");
+            }
+
+            introduce("홍", "길동", say_hello);
+            introduce("홍", "길동", say_bye);
+            
+        </script>
+
+    </body>
+</html>
+<!-- introduce()안에 있는 callback은 fullName의 값을 저장하는 매개변수
+syy_hello(name)함수의 매개변수 name에 callback함수가 적용되어 fullName이 출력된다.
+따라서 introduce("홍", "길동", say_hello);을 출력 하면 
+sayhello 함수가 출력될때 매개변수 name에 fullName 홍길동이 입력되어 
+"안녕하세요 제 이름은 홍길동입니다."로 출력된다.-->

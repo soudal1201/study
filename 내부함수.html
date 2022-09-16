@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            function pythagoras(width, height) {
+                function square(x) {
+                    return x * x;
+                }
+                return Math.sqrt(square(width) + square(height));
+            }
+
+            var a = prompt('길이를 입력하시오');
+            var b = prompt('높이를 입력하시오');
+
+            alert(pythagoras(a,b));
+        </script>
+</html>
+
+<!-- pythagoras 외부 함수 선언 후 square 내부 함수에서 
+외부 함수의 값을 입력받아 결과값을 리턴시키고 외부 함수에서 내부함수의 
+리턴 값을 받아 결과 값을 리턴시킨다.  -->

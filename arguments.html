@@ -8,15 +8,13 @@
 </head>
 <body>
     <script>
-        var output = 0;
-
-        for (var i = 1; i <=10; i++) {
-            if (i % 2 == 1) {
-                continue;
-            }
-            output += i;
+        function sumall() {
+            alert(typeof (arguments) + ' : ' + arguments.length)
         }
-        alert(output);
+
+        sumall(1,2,3,34,4,)
     </script>
 </body>
 </html>
+
+<!-- arguments는 함수의 배열을 의미한다. 함수 안에서 Array랑 같은 역할 -->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function returnFunction() {
+            alert('문장 A');
+            return;
+            alert('문장 B');
+        }
+        
+        var output = returnFunction();
+        alert(typeof(output) + ' : ' + output);
+    </script>
+</body>
+</html>
+
+<!-- 문장 A와 문장 B가 출력이 되어야 하지만 
+return 값으로 인해 문장 A 출력 후 return 되어 되돌아가기 때문에 
+문장 B의 값은 전달 되지 못한채 출력된다. -->
