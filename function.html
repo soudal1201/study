@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="main.css">
+</head>
+<!-- <body>
+    <div class="alert-box" id = "alert-box"> 
+        <p>Alert 박스</p>
+        <button onclick="알림창닫기()"> 닫기</button>
+    </div>
+    <button onclick= "알림창열기()">버튼 </button>
+    
+
+    <script>
+      function 알림창열기 () {
+        document.getElementById('alert-box').style.display = 'block';
+      }
+      
+      function 알림창닫기 () {
+        document.getElementById('alert-box').style.display = 'none';
+      }
+    </script>
+
+</body> -->
+
+
+<!-- 파라미터 => 알림창 함수에 구멍을 뚫어 하나의 함수만 정의 해 놓고 
+원하는 값을 구멍에 넣어 출력 시킬 수 있다. 
+<body>  
+    <div class="alert-box" id = "alert-box"> 
+        <p>Alert 박스</p>
+        <button onclick="알림창('none')"> 닫기</button>
+    </div>
+    <button onclick= "알림창('block')">버튼 </button>
+    
+
+    <script>
+      function 알림창(구멍) {
+        document.getElementById('alert-box').style.display = 구멍;
+
+
+      }
+    </script>
+
+</body>-->
+
+
+<body> 
+    <div class="log" id = "log"> 
+        <p> </p>
+    </div> 
+    <button onclick="알림창('아이디를 입력하셈')"> 버튼1</button>
+    <button onclick= "알림창('비번을 입력하셈')">버튼2 </button>
+
+    <script>
+      function 알림창(e) {
+        document.getElementById('log').innerHTML = e;
+        document.getElementById('log').style.display = 'block';
+
+
+      }
+    </script>
+
+</body>
+
+</html>
