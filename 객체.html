@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="student.js"></script>
+</head>
+<body>
+    <script>
+        for (var i in Students) {
+    Students[i].getSum = function() {
+        return this.국어 + this.수학 + this.영어 + this.과학;
+    };
+
+    Students[i].getAverge = function() {
+        return this.getSum() / 4;
+    };
+
+}
+
+var output = '이름\t총점\t평균\n';
+for (var i in Students) {
+    with (Students[i]) {
+        output += 이름 + '\t' + getSum() + '\t' + getAverge() + '\n'
+    };
+};
+
+console.log(output);
+    </script>
+</body>
+</html>
