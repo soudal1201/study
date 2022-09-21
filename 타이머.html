@@ -7,25 +7,18 @@
         <title>Document</title>
     </head>
     <body>
-
         
         <script>
-
-            // setTimeout(function () {
-            //     alert('3초가 지났습니다')
-            // }, 3000);
-            // setInterval(function () {
-            //     alert('3초가 지났습니다')
-            // }, 3000);
-
             var intervalID = setInterval(function () {
-                alert(new Date());
+                alert('<p>' + new Date() + '</p>');
             },1000);
+            
 
             setTimeout(function () {
                 clearInterval(intervalID);
                 alert('종료합니다.')
             },5000);
+
         </script>
     </body>
 </html>
