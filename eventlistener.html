@@ -10,7 +10,7 @@
 <body> 
 <!-- html에서 창이 뜨면 css로 꾸며주는 곳 -->
     <div class="log" id = "log"> 
-        <p id = "title"> </p>
+        <p id = "title">  </p>
         <button id = "close"> close </button>
     </div> 
 <!-- html -->
@@ -20,8 +20,8 @@
     <script>
 // id가 title을 가진 요소의 이너 문자를 알림창()함수를 이용해서 바꿈 
 // id가 log인 css 요소를 바꿔줌
-        function 알림창(e) {
-        document.getElementById('title').innerHTML = e;
+        function 알림창() {
+        document.getElementById('title').innerHTML = '';
         document.getElementById('log').style.display = 'block';
         }
 // document.getElementById('close') 이 요소가 addEventlistener('click', function() {}) 클릭되면 함수 실행 
