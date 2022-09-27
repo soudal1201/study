@@ -8,16 +8,62 @@
     </head>
     <body>
         
+        <div class = "time">
+            <p id = 'test'>  </p>
+        </div>
+        <button onclick='시작()' id = "timer">타이머 시작 </button>
+        <button onclick='멈춤()' id = "stop">타이머 정지 </button>
+        <button onclick='초기화()' id = "reset">타이머 초기화 </button>
+
+        
         <script>
-            var intervalID = setInterval(function () {
-                alert('<p>' + new Date() + '</p>');
-            },1000);
+            var tm;
+            var st = 0;
+            var hour, min,sec;
+
+            function 시작(){
+                tm = setInterval(stt,1000);
+            }
+
+            function stt(){
+                st = st + 1;
+                document.getElementById('test').innerText = getTimeset(); 
+            };
+
+            function 멈춤() {
+                clearInterval(tm);
+            }
+
+            function 초기화(){
+                
+            }
+
+            function getTimeset() {
+                hour = parseInt(String(st / (60 * 60)));
+                min = parseInt(String((st - (hour * 60 * 60)) / 60));
+                sec = time % 60;
+
+                return String(hour).padStart(2, '0') + ":" + String(min).padStart(2, '0') + ":" + String(sec).padStart(2, '0');
+            }
+
+            // timer.addEventListener('click',function() {
+            //     document.write(+'초 지났습니다');
+            // },1000);
+
+            // stop.addEventListener('click',function() {
+            //     clearInterval(timer);
+            //     document.write('종료합니다.')
+            // },5000);
+
+            // var intervalID = setInterval(function () {
+            //     alert('<p>' + new Date() + '</p>');
+            // },1000);
             
 
-            setTimeout(function () {
-                clearInterval(intervalID);
-                alert('종료합니다.')
-            },5000);
+            // setTimeout(function () {
+            //     clearInterval(intervalID);
+            //     alert('종료합니다.')
+            // },5000);
 
         </script>
     </body>
